@@ -1,0 +1,1 @@
+1. merge handling of *.tar.gz and *.tar.bz2, it's basically duplication right now
