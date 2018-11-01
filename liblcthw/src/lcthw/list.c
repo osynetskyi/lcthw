@@ -33,7 +33,6 @@ void List_destroy(List * list)
 	    free(cur->prev);
 	}
     }
-
     free(list->last);
     free(list);
 }
@@ -210,11 +209,19 @@ void List_join(List * main, List * joiner)
 {
     if ((List_check(main) != 0) || (List_check(joiner) != 0))
 	return;
-
-    main->last->next = joiner->first;
-    joiner->first->prev = main->last;
-    main->last = joiner->last;
-    main->count += joiner->count;
+    if (List_count(joiner) > 0) {
+	if (List_count(main) > 0) {
+            main->last->next = joiner->first;
+            joiner->first->prev = main->last;
+            main->last = joiner->last;
+            main->count += joiner->count;
+	} else {
+	    int count = List_count(joiner);
+	    for (int i = 0; i < count; i++) {
+	        List_push(main, List_pop(joiner));
+	    }
+	}
+    }
     free(joiner);
 }
 

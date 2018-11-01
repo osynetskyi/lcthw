@@ -61,7 +61,7 @@ void *List_remove(List * list, ListNode * node);
 // splits the list on the node, returns a pointer to new list that starts with node
 List *List_split(List * list, ListNode * node);
 
-// adds all elements of joiner to the end of main list, frees pointer to joiner
+// adds all elements of joiner to the end of main list
 void List_join(List * main, List * joiner);
 
 // returns a pointer to the copy of list

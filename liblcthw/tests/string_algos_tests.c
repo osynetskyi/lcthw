@@ -3,6 +3,7 @@
 #include <lcthw/string_algos.h>
 #include <lcthw/bstrlib.h>
 #include <time.h>
+#include <lcthw/stats.h>
 
 struct tagbstring IN_STR = bsStatic(
 	"I have ALPHA beta ALPHA and oranges ALPHA");
@@ -73,11 +74,6 @@ char *test_binstr_performance()
     int found_at = 0;
     unsigned long find_count = 0;
     time_t elapsed = 0;
-    
-    /*for (i = 0; i < 10; i++) {
-        found_at = binstr(&IN_STR, 0, &ALPHA);
-        mu_assert(found_at != BSTR_ERR, "Failed to find!");
-    }*/
 
     time_t start = time(NULL);
 
@@ -90,10 +86,6 @@ char *test_binstr_performance()
 	    IN_LIST->entry[7] = needle;
 	    bstring haystack = bjoinStatic(IN_LIST, " ");
 	    
-	    /*found_at = binstr(&IN_STR, 0, &ALPHA);
-	    mu_assert(found_at != BSTR_ERR, "Failed to find!");
-	    find_count++;*/
-
 	    found_at = binstr(haystack, 0, needle);
 	    mu_assert(found_at != BSTR_ERR, "Failed to find!");
 	    find_count++;
@@ -118,10 +110,6 @@ char *test_find_performance()
     unsigned long find_count = 0;
     time_t elapsed = 0;
     
-    /*for (i = 0; i < 10; i++) {
-        found_at = String_find(&IN_STR, &ALPHA);
-    }*/
-    
     time_t start = time(NULL);
 
     do {
@@ -132,9 +120,6 @@ char *test_find_performance()
 	    IN_LIST->entry[4] = needle;
 	    IN_LIST->entry[7] = needle;
 	    bstring haystack = bjoinStatic(IN_LIST, " ");
-
-	    /*found_at = String_find(&IN_STR, &ALPHA);
-	    find_count++;*/
 
 	    found_at = String_find(haystack, needle);
 	    mu_assert(found_at != -1, "Unable to find");
@@ -160,15 +145,6 @@ char *test_scan_performance()
     int found_at = 0;
     unsigned long find_count = 0;
     time_t elapsed = 0;
-    //StringScanner *scan = StringScanner_create(&IN_STR);
-
-    /*for (i = 0; i < 10; i++) {
-        found_at = 0;
-
-    	do {
-            found_at = StringScanner_scan(scan, &ALPHA);
-	} while (found_at != -1);
-    }*/
 
     time_t start = time(NULL);
 
@@ -184,10 +160,6 @@ char *test_scan_performance()
 	    bstring haystack = bjoinStatic(IN_LIST, " ");
 	    StringScanner *scan = StringScanner_create(haystack);
 
-	    /*do {
-	        found_at = StringScanner_scan(scan, &ALPHA);
-		find_count++;
-	    } while (found_at != -1);*/
 	    do {
 	        found_at = StringScanner_scan(scan, needle);
 		find_count++;
@@ -205,7 +177,58 @@ char *test_scan_performance()
     debug("SCAN COUNT: %lu, END TIME: %d, OPS: %f",
 	    find_count, (int)elapsed, (double)find_count / elapsed);
 
-    //StringScanner_destroy(scan);
+    return NULL;
+}
+
+double run_scan_test()
+{
+    int i = 0;
+    int found_at = 0;
+    unsigned long find_count = 0, cap = 100000;
+
+    time_t start = time(NULL);
+    do {
+	for (i = 0; i < 1000; i++) {
+	    found_at = 0;
+
+	    char *rand = rand_string(5);
+	    bstring needle = bfromcstr(rand);
+	    IN_LIST->entry[2] = needle;
+	    IN_LIST->entry[4] = needle;
+	    IN_LIST->entry[7] = needle;
+	    bstring haystack = bjoinStatic(IN_LIST, " ");
+	    StringScanner *scan = StringScanner_create(haystack);
+
+	    do {
+		found_at = StringScanner_scan(scan, needle);
+		find_count++;
+	    } while (found_at != -1);
+
+	    StringScanner_destroy(scan);
+	    bdestroy(haystack);
+	    bdestroy(needle);
+	    free(rand);
+	}
+    
+    } while (find_count <= cap);
+
+    return (double)(time(NULL) - start);
+}
+
+char *test_stats()
+{
+    Stats *st = Stats_create();
+    int num_runs = 100;
+    int i = 0;
+    double sample = 0.0;
+
+    for (i = 0; i < num_runs; i++) {
+        sample = run_scan_test();
+	Stats_sample(st, sample);
+    }
+
+    Stats_dump(st);
+    free(st);
 
     return NULL;
 }
@@ -222,6 +245,7 @@ char *all_tests()
     mu_run_test(test_scan_performance);
     mu_run_test(test_find_performance);
     mu_run_test(test_binstr_performance);
+    mu_run_test(test_stats);
 
     IN_LIST->entry[2] = bfromcstr("epic fail");
     IN_LIST->entry[4] = bfromcstr("fail epic");
