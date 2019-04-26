@@ -1,0 +1,6 @@
+/test.tst TestHandler
+/ IndexHandler
+/test/this/out/index.html PageHandler1
+/index.html PageHandler2
+/and/then/i/have/things/to/test.html PageHandler3
+/lib ../ex29/build/libex29.so print_a_message
