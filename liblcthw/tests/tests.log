@@ -46,27 +46,27 @@ DEBUG tests/darray_algos_tests.c 162: ----- RUNNING: ./tests/darray_algos_tests
 DEBUG tests/darray_algos_tests.c 150: 
 ----- test_qsort
 DEBUG tests/darray_algos_tests.c 73: --- Testing qsort sorting algorithm
-DEBUG tests/darray_algos_tests.c 80: qsort performance: 0.0000130000 sec
+DEBUG tests/darray_algos_tests.c 80: qsort performance: 0.0000240000 sec
 DEBUG tests/darray_algos_tests.c 151: 
 ----- test_heapsort
 DEBUG tests/darray_algos_tests.c 73: --- Testing heapsort sorting algorithm
-DEBUG tests/darray_algos_tests.c 80: heapsort performance: 0.0000150000 sec
+DEBUG tests/darray_algos_tests.c 80: heapsort performance: 0.0000400000 sec
 DEBUG tests/darray_algos_tests.c 152: 
 ----- test_mergesort
 DEBUG tests/darray_algos_tests.c 73: --- Testing mergesort sorting algorithm
-DEBUG tests/darray_algos_tests.c 80: mergesort performance: 0.0000140000 sec
+DEBUG tests/darray_algos_tests.c 80: mergesort performance: 0.0000100000 sec
 DEBUG tests/darray_algos_tests.c 153: 
 ----- test_qsort_my
 DEBUG tests/darray_algos_tests.c 73: --- Testing my qsort sorting algorithm
-DEBUG tests/darray_algos_tests.c 80: my qsort performance: 0.0000120000 sec
+DEBUG tests/darray_algos_tests.c 80: my qsort performance: 0.0000080000 sec
 DEBUG tests/darray_algos_tests.c 154: 
 ----- test_heapsort_my
 DEBUG tests/darray_algos_tests.c 73: --- Testing my heapsort sorting algorithm
-DEBUG tests/darray_algos_tests.c 80: my heapsort performance: 0.0000170000 sec
+DEBUG tests/darray_algos_tests.c 80: my heapsort performance: 0.0000130000 sec
 DEBUG tests/darray_algos_tests.c 155: 
 ----- test_mergesort_my
 DEBUG tests/darray_algos_tests.c 73: --- Testing my mergesort sorting algorithm
-DEBUG tests/darray_algos_tests.c 80: my mergesort performance: 0.0000150000 sec
+DEBUG tests/darray_algos_tests.c 80: my mergesort performance: 0.0000110000 sec
 DEBUG tests/darray_algos_tests.c 156: 
 ----- test_sort_add
 DEBUG tests/darray_algos_tests.c 157: 
@@ -88,132 +88,132 @@ DEBUG tests/darray_tests.c 165:
 ----- test_push_pop
 DEBUG tests/darray_tests.c 168: 
 ----- test_time_push
-DEBUG tests/darray_tests.c 172: 30000 iterations of push took 0.0011660000, average 0.0000000389
+DEBUG tests/darray_tests.c 172: 30000 iterations of push took 0.0009150000, average 0.0000000305
 DEBUG tests/darray_tests.c 174: 
 ----- test_copy
 DEBUG tests/darray_tests.c 177: 
 ----- test_time_pop
-DEBUG tests/darray_tests.c 181: 30000 iterations of pop took 0.0020970000, average 0.0000000699
+DEBUG tests/darray_tests.c 181: 30000 iterations of pop took 0.0012820000, average 0.0000000427
 DEBUG tests/darray_tests.c 184: 
 ----- test_destroy
 FNV	A32	DJB	BAD	JEN	ELF
-1005	956	993	100000	987	997
-1020	1019	997	0	1031	979
-961	975	1011	0	936	997
-956	1015	1005	0	1053	1023
-1049	1017	1040	0	1018	1052
-1016	1021	1045	0	972	1008
-1040	1002	931	0	1008	980
-940	1007	1020	0	1005	962
-1084	1002	1053	0	1012	1051
-1005	1025	1000	0	992	1010
-983	1033	1024	0	1021	949
-960	1023	1009	0	941	973
-983	981	978	0	1015	1023
-1015	970	1040	0	1001	1034
-1026	998	938	0	1044	1004
-946	991	974	0	1035	1025
-989	952	974	0	989	1032
-1042	985	1027	0	997	945
-1009	994	989	0	972	951
-1012	975	1011	0	956	989
-1006	961	1004	0	1010	998
-1010	999	982	0	1039	1041
-1048	1006	1015	0	918	1008
-967	1042	1007	0	1016	1010
-983	973	994	0	1031	999
-1021	1005	994	0	1018	1004
-966	1017	1046	0	1060	1030
-1010	1018	980	0	1057	993
-925	1012	998	0	964	1088
-983	1001	978	0	984	950
-1012	1004	949	0	985	1038
-1026	1038	994	0	948	993
-997	1084	998	0	984	940
-969	1011	986	0	984	1023
-994	987	974	0	1021	989
-980	1047	982	0	1037	1010
-956	1008	925	0	1042	1011
-984	965	1049	0	1021	992
-970	1016	1018	0	1028	1002
-1062	933	1052	0	988	988
-1021	983	961	0	1021	982
-1035	1072	1045	0	981	958
-1015	965	1019	0	1010	1012
-1007	947	1017	0	1016	938
-1012	968	1009	0	1010	989
-1028	1011	951	0	988	995
-1005	1054	988	0	993	1001
-953	1033	1014	0	970	964
-986	1020	1052	0	1002	1039
-993	1045	996	0	997	1021
-981	943	973	0	988	1000
-1017	1035	1041	0	1062	984
-997	1034	990	0	1028	1019
-1029	978	1000	0	1040	1006
-1055	1007	1000	0	1026	982
-997	980	924	0	1002	1011
-972	1005	1018	0	1019	944
-1021	1043	1030	0	1003	1028
-988	998	1031	0	1006	974
-1035	1030	1065	0	963	1019
-957	1017	977	0	998	928
-987	957	1044	0	1049	1023
-1000	993	1016	0	1003	970
-958	1021	955	0	978	993
-960	983	977	0	1008	986
-970	949	954	0	944	1008
-1012	987	983	0	999	987
-1003	975	991	0	1032	973
-1008	1030	1011	0	942	982
-1076	981	995	0	996	956
-1006	958	985	0	956	1004
-1034	1004	1018	0	987	982
-1017	991	971	0	980	985
-992	1030	1002	0	1005	1031
-1015	1026	1026	0	993	1036
-1021	998	985	0	961	992
-957	962	958	0	1058	1038
-980	1024	980	0	994	1042
-943	990	1001	0	1008	980
-959	998	988	0	971	1015
-942	1009	979	0	941	982
-1042	1009	972	0	1009	1049
-1028	972	969	0	975	989
-1075	980	994	0	1052	976
-1018	1034	1009	0	988	1051
-1071	969	1058	0	1027	1030
-1001	980	1010	0	1021	983
-1018	1016	1000	0	961	1014
-973	960	960	0	1011	992
-1014	975	970	0	1023	985
-1004	1003	976	0	907	1059
-956	1058	1009	0	1039	987
-965	980	994	0	1025	1046
-1026	1083	1044	0	1027	1003
-955	982	1006	0	958	1022
-998	976	1043	0	947	954
-991	935	1034	0	990	994
-1000	1048	1036	0	1006	1004
-957	980	992	0	1005	1001
-1054	958	1020	0	981	1011
+989	935	992	100000	985	951
+1026	1012	1010	0	963	1061
+967	1007	954	0	998	1008
+1019	992	1057	0	1075	938
+1036	982	1020	0	1029	991
+1085	1016	1055	0	1003	994
+1051	1007	981	0	1035	947
+1031	993	1003	0	965	1007
+966	1021	1005	0	1032	979
+1014	1007	980	0	1071	1013
+1030	1054	993	0	1032	1002
+966	980	994	0	1013	1034
+982	985	1038	0	989	979
+1056	1039	979	0	1009	953
+1020	964	977	0	1034	1060
+1036	932	984	0	977	1056
+1038	1011	993	0	985	998
+1011	986	1019	0	1036	1075
+966	1031	939	0	999	989
+1003	1006	1024	0	986	986
+987	1010	954	0	1035	1029
+952	1001	989	0	983	1071
+994	1020	965	0	988	970
+991	1042	972	0	999	987
+1030	1014	951	0	1011	1033
+1023	979	1030	0	1051	982
+1038	1034	988	0	1040	993
+1041	1014	988	0	990	975
+959	991	954	0	983	997
+1018	1032	1064	0	1016	1003
+965	956	1017	0	976	1003
+1002	989	1002	0	1012	1001
+1011	1004	986	0	984	1021
+986	951	1022	0	1000	966
+930	973	1031	0	1047	1031
+1011	971	1059	0	1006	975
+995	1014	996	0	1010	934
+1040	1048	1004	0	1036	1077
+991	967	970	0	973	980
+969	985	940	0	1002	978
+955	992	977	0	1016	1018
+967	1023	1003	0	995	1040
+990	993	1004	0	1062	1006
+1053	996	960	0	939	949
+972	980	970	0	1062	1035
+957	1003	1047	0	975	1075
+957	916	1020	0	961	966
+1008	974	1037	0	1000	973
+995	1013	992	0	1018	1031
+998	1031	1010	0	1000	1028
+963	1013	1029	0	938	1011
+988	997	1062	0	1002	998
+1003	986	967	0	1005	998
+1030	1017	1043	0	930	1012
+1033	1001	1011	0	1013	994
+995	1036	1010	0	1035	1016
+1002	1076	1009	0	1088	960
+1012	996	1025	0	952	992
+1022	957	1029	0	984	1019
+966	991	1031	0	991	975
+985	991	1002	0	1012	933
+963	1035	945	0	993	1000
+974	949	977	0	1038	1015
+1010	1048	981	0	960	928
+965	1012	1023	0	1020	1017
+953	971	1006	0	947	1003
+929	997	924	0	987	1023
+947	1005	1034	0	1027	1002
+1063	970	983	0	945	995
+1059	1008	984	0	979	966
+1045	1017	1041	0	1029	974
+966	949	963	0	1010	1011
+1000	1003	1036	0	1059	1025
+957	976	992	0	985	993
+1018	961	983	0	998	1005
+1012	1033	982	0	1011	1024
+960	979	1010	0	985	994
+985	1025	979	0	998	998
+1019	1022	973	0	989	994
+1018	1015	997	0	910	1034
+972	985	1045	0	958	1021
+1045	992	1000	0	968	1005
+955	1045	1042	0	970	1042
+1026	1032	996	0	974	1028
+1000	994	1053	0	1019	973
+1053	1032	999	0	1021	1002
+977	1005	974	0	1002	951
+1016	1033	1032	0	1026	1034
+1021	975	1005	0	973	998
+972	971	1036	0	990	994
+1024	991	1030	0	1015	977
+994	1029	1010	0	963	1008
+982	939	943	0	988	1016
+1033	996	972	0	987	995
+1003	1006	1011	0	979	999
+1025	1092	953	0	984	1002
+998	1029	987	0	1037	1043
+938	1000	954	0	953	896
+1040	990	1013	0	974	966
+1007	952	1015	0	1013	993
 DEBUG tests/hashmap_tests.c 182: ----- RUNNING: ./tests/hashmap_tests
 DEBUG tests/hashmap_tests.c 170: 
 ----- test_create
 DEBUG tests/hashmap_tests.c 171: 
 ----- test_get_set
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c4ea8 114452817 and 0x22c4e98 114452817
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f5ea8 114452817 and 0x12f5e98 114452817
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c4ea8 114452817 and 0x22c4e98 114452817
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f5ea8 114452817 and 0x12f5e98 114452817
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c4eb8 114452818 and 0x22c4ea8 114452818
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f5eb8 114452818 and 0x12f5ea8 114452818
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c4ec8 114714963 and 0x22c4eb8 114714963
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f5ec8 114714963 and 0x12f5eb8 114714963
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
@@ -226,17 +226,17 @@ DEBUG tests/hashmap_tests.c 43: KEY: test data 1
 DEBUG tests/hashmap_tests.c 43: KEY: test data 2
 DEBUG tests/hashmap_tests.c 173: 
 ----- test_delete
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c4ec8 114452817 and 0x22c4e98 114452817
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f5ec8 114452817 and 0x12f5e98 114452817
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i -1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c4e98 114452818 and 0x22c4ea8 114452818
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f5e98 114452818 and 0x12f5ea8 114452818
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i -1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c4ea8 114714963 and 0x22c4eb8 114714963
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f5ea8 114714963 and 0x12f5eb8 114714963
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
@@ -244,920 +244,862 @@ DEBUG src/lcthw/hashmap.c 274: hashmap_get i -1
 DEBUG tests/hashmap_tests.c 175: 
 ----- test_defect
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c4ec8 246157944 and 0x22c4e98 246157944
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f5ec8 185779349 and 0x12f5e98 185779349
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5678 108873409 and 0x22c5668 108873409
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6678 120475826 and 0x12f6668 120475826
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5738 204744246 and 0x22c5728 204744246
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6738 30246820 and 0x12f6728 30246820
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c57f8 201482978 and 0x22c57e8 201482978
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f67f8 12511239 and 0x12f67e8 12511239
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c58b8 106958157 and 0x22c58a8 106958157
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f68b8 12946665 and 0x12f68a8 12946665
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5978 76175458 and 0x22c5968 76175458
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6978 171531059 and 0x12f6968 171531059
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5a38 174660220 and 0x22c5a28 174660220
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6a38 162308748 and 0x12f6a28 162308748
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5af8 73419640 and 0x22c5ae8 73419640
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6af8 39342661 and 0x12f6ae8 39342661
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5bb8 113392952 and 0x22c5ba8 113392952
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6bb8 218046417 and 0x12f6ba8 218046417
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5c78 149926423 and 0x22c5c68 149926423
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6c78 112087906 and 0x12f6c68 112087906
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5d38 261453983 and 0x22c5d28 261453983
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6d38 150904437 and 0x12f6d28 150904437
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5df8 235951345 and 0x22c5de8 235951345
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6df8 227025450 and 0x12f6de8 227025450
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5eb8 126432316 and 0x22c5ea8 126432316
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6eb8 131762388 and 0x12f6ea8 131762388
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5f78 160653888 and 0x22c5f68 160653888
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6f78 102348314 and 0x12f6f68 102348314
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6038 100681024 and 0x22c6028 100681024
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7038 141277334 and 0x12f7028 141277334
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c60e8 225234846 and 0x22c5728 204744246
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f70f8 190855909 and 0x12f70e8 190855909
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f71b8 76318456 and 0x12f71a8 76318456
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7278 104060878 and 0x12f7268 104060878
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7328 93677761 and 0x12f6ae8 39342661
 
 [ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
 [ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c60e8 225234846
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6ae8 39342661 and 0x12f7328 93677761
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c60e8 225234846
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6ae8 39342661 and 0x12f7328 93677761
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c60f8 225234846 and 0x22c60e8 225234846
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7338 93677761 and 0x12f7328 93677761
 
 DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 2
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c61b8 101527789 and 0x22c61a8 101527789
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f73f8 154703128 and 0x12f73e8 154703128
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6278 140785042 and 0x22c6268 140785042
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6338 29974498 and 0x22c6328 29974498
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c63f8 267603922 and 0x22c63e8 267603922
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c60e8 225234846
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64a8 46176146 and 0x22c60e8 225234846
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64a8 46176146 and 0x22c5728 204744246
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 2
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c60e8 225234846 and 0x22c64a8 46176146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c64a8 46176146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c60e8 225234846
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64a8 46176146 and 0x22c5728 204744246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c60e8 225234846
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64b8 46176146 and 0x22c5728 204744246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64b8 46176146 and 0x22c64a8 46176146
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 3
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6578 218250034 and 0x22c6568 218250034
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6628 262590645 and 0x22c5de8 235951345
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f74a8 128886720 and 0x12f6728 30246820
 
 [ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
 [ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5de8 235951345 and 0x22c6628 262590645
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6728 30246820 and 0x12f74a8 128886720
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5de8 235951345 and 0x22c6628 262590645
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6728 30246820 and 0x12f74a8 128886720
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6638 262590645 and 0x22c6628 262590645
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f74b8 128886720 and 0x12f74a8 128886720
 
 DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 2
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c66f8 130551426 and 0x22c66e8 130551426
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7578 28010952 and 0x12f7568 28010952
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c67b8 119739425 and 0x22c67a8 119739425
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7638 97651212 and 0x12f7628 97651212
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6878 133875130 and 0x22c6868 133875130
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f76f8 494858 and 0x12f76e8 494858
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6938 64902836 and 0x22c6928 64902836
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f77b8 15269319 and 0x12f77a8 15269319
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c69f8 9380484 and 0x22c69e8 9380484
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6ab8 90117270 and 0x22c6aa8 90117270
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6b78 183310308 and 0x22c6b68 183310308
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6c38 250743319 and 0x22c6c28 250743319
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6cf8 135323494 and 0x22c6ce8 135323494
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6db8 26024329 and 0x22c6da8 26024329
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6e78 128716121 and 0x22c6e68 128716121
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6f38 48257648 and 0x22c6f28 48257648
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64a8 46176146 and 0x22c5728 204744246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c60e8 225234846
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6fe8 44957346 and 0x22c5728 204744246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6fe8 44957346 and 0x22c64a8 46176146
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 3
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64a8 46176146 and 0x22c5728 204744246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c60e8 225234846 and 0x22c6fe8 44957346
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64a8 46176146 and 0x22c6fe8 44957346
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64a8 46176146 and 0x22c60e8 225234846
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c60e8 225234846
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6fe8 44957346 and 0x22c64a8 46176146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64a8 46176146 and 0x22c5728 204744246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c60e8 225234846
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6ff8 44957346 and 0x22c5728 204744246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6ff8 44957346 and 0x22c6fe8 44957346
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 4
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c70b8 218272901 and 0x22c70a8 218272901
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7178 114748849 and 0x22c7168 114748849
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7238 43404776 and 0x22c7228 43404776
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c72f8 18995847 and 0x22c72e8 18995847
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c73b8 234820437 and 0x22c73a8 234820437
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7478 142385911 and 0x22c7468 142385911
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7538 184405050 and 0x22c7528 184405050
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6fe8 44957346 and 0x22c64a8 46176146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64a8 46176146 and 0x22c5728 204744246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c60e8 225234846
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c75e8 98803146 and 0x22c5728 204744246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c75e8 98803146 and 0x22c6fe8 44957346
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c75e8 98803146 and 0x22c64a8 46176146
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 4
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6fe8 44957346 and 0x22c64a8 46176146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c60e8 225234846 and 0x22c75e8 98803146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c75e8 98803146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c60e8 225234846
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6fe8 44957346 and 0x22c75e8 98803146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64a8 46176146 and 0x22c75e8 98803146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6fe8 44957346 and 0x22c64a8 46176146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64a8 46176146 and 0x22c75e8 98803146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c75e8 98803146 and 0x22c5728 204744246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c60e8 225234846
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c75f8 98803146 and 0x22c75e8 98803146
-
-DEBUG src/lcthw/hashmap.c 220: pos: 2, end: 5
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 2
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c76b8 131601699 and 0x22c76a8 131601699
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7778 99650638 and 0x22c7768 99650638
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7838 152417456 and 0x22c7828 152417456
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c78f8 81432104 and 0x22c78e8 81432104
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c79b8 96632435 and 0x22c79a8 96632435
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7a68 48694004 and 0x22c78e8 81432104
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c78e8 81432104 and 0x22c7a68 48694004
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7a68 48694004 and 0x22c78e8 81432104
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7a78 48694004 and 0x22c78e8 81432104
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7a78 48694004 and 0x22c7a68 48694004
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7b38 138162487 and 0x22c7b28 138162487
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7bf8 263055896 and 0x22c7be8 263055896
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7a68 48694004 and 0x22c78e8 81432104
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7ca8 16076404 and 0x22c78e8 81432104
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7ca8 16076404 and 0x22c7a68 48694004
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 2
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c78e8 81432104 and 0x22c7ca8 16076404
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7a68 48694004 and 0x22c7ca8 16076404
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7a68 48694004 and 0x22c78e8 81432104
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7ca8 16076404 and 0x22c7a68 48694004
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7a68 48694004 and 0x22c78e8 81432104
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7cb8 16076404 and 0x22c7a68 48694004
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7cb8 16076404 and 0x22c7ca8 16076404
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 3
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7d78 246895643 and 0x22c7d68 246895643
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7e28 2809252 and 0x22c5ba8 113392952
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5ba8 113392952 and 0x22c7e28 2809252
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7e28 2809252 and 0x22c5ba8 113392952
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7e38 2809252 and 0x22c5ba8 113392952
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7e38 2809252 and 0x22c7e28 2809252
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7ee8 245181847 and 0x22c72e8 18995847
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7868 265180126 and 0x12f6668 120475826
 
 [ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
 [ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c72e8 18995847 and 0x22c7ee8 245181847
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6668 120475826 and 0x12f7868 265180126
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c72e8 18995847 and 0x22c7ee8 245181847
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6668 120475826 and 0x12f7868 265180126
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7ef8 245181847 and 0x22c7ee8 245181847
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7878 265180126 and 0x12f7868 265180126
 
 DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 2
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7fb8 242405059 and 0x22c7fa8 242405059
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7938 201740842 and 0x12f7928 201740842
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8078 59424055 and 0x22c8068 59424055
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f79f8 236762201 and 0x12f79e8 236762201
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8138 191424633 and 0x22c8128 191424633
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7ab8 145739811 and 0x12f7aa8 145739811
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c81f8 229912000 and 0x22c81e8 229912000
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7b78 19940113 and 0x12f7b68 19940113
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c82b8 117919354 and 0x22c82a8 117919354
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7c38 210228964 and 0x12f7c28 210228964
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8368 57899411 and 0x22c7468 142385911
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7cf8 179867062 and 0x12f7ce8 179867062
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7db8 189822480 and 0x12f7da8 189822480
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7e78 153336685 and 0x12f7e68 153336685
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7f28 139432228 and 0x12f73e8 154703128
 
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7468 142385911 and 0x22c8368 57899411
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f73e8 154703128 and 0x12f7f28 139432228
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8368 57899411 and 0x22c7468 142385911
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7f28 139432228 and 0x12f73e8 154703128
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8378 57899411 and 0x22c7468 142385911
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7f38 139432228 and 0x12f73e8 154703128
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8378 57899411 and 0x22c8368 57899411
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7f38 139432228 and 0x12f7f28 139432228
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8438 151593372 and 0x22c8428 151593372
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6fe8 44957346 and 0x22c64a8 46176146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64a8 46176146 and 0x22c75e8 98803146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c75e8 98803146 and 0x22c5728 204744246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c60e8 225234846
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c84e8 106052246 and 0x22c75e8 98803146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c84e8 106052246 and 0x22c60e8 225234846
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c84e8 106052246 and 0x22c5728 204744246
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 5
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64a8 46176146 and 0x22c75e8 98803146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6fe8 44957346 and 0x22c64a8 46176146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c60e8 225234846 and 0x22c84e8 106052246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c84e8 106052246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c60e8 225234846
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6fe8 44957346 and 0x22c84e8 106052246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64a8 46176146 and 0x22c84e8 106052246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c75e8 98803146 and 0x22c84e8 106052246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6fe8 44957346 and 0x22c64a8 46176146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c64a8 46176146 and 0x22c75e8 98803146
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c75e8 98803146 and 0x22c84e8 106052246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c84e8 106052246 and 0x22c5728 204744246
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5728 204744246 and 0x22c60e8 225234846
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c84f8 106052246 and 0x22c84e8 106052246
-
-DEBUG src/lcthw/hashmap.c 220: pos: 3, end: 6
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 3
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c85a8 149494833 and 0x22c8128 191424633
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8128 191424633 and 0x22c85a8 149494833
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c85a8 149494833 and 0x22c8128 191424633
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c85b8 149494833 and 0x22c8128 191424633
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c85b8 149494833 and 0x22c85a8 149494833
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8678 28698585 and 0x22c8668 28698585
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8738 85242339 and 0x22c8728 85242339
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7e28 2809252 and 0x22c5ba8 113392952
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c87e8 244835752 and 0x22c5ba8 113392952
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7fe8 217607785 and 0x12f7e68 153336685
 
 [ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
 [ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5ba8 113392952 and 0x22c87e8 244835752
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7e68 153336685 and 0x12f7fe8 217607785
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7e28 2809252 and 0x22c5ba8 113392952
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7e68 153336685 and 0x12f7fe8 217607785
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7e28 2809252 and 0x22c5ba8 113392952
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7ff8 217607785 and 0x12f7fe8 217607785
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5ba8 113392952 and 0x22c87e8 244835752
+DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f80b8 126739525 and 0x12f80a8 126739525
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c87f8 244835752 and 0x22c5ba8 113392952
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8178 28078021 and 0x12f8168 28078021
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c87f8 244835752 and 0x22c87e8 244835752
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8228 179609821 and 0x12f8168 28078021
+
+[ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
+[ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8168 28078021 and 0x12f8228 179609821
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8168 28078021 and 0x12f8228 179609821
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8238 179609821 and 0x12f8228 179609821
+
+DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f82f8 245601240 and 0x12f82e8 245601240
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f83b8 200411333 and 0x12f83a8 200411333
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8478 258824918 and 0x12f8468 258824918
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8538 75160882 and 0x12f8528 75160882
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f85f8 185917653 and 0x12f85e8 185917653
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f86a8 93225025 and 0x12f80a8 126739525
+
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f80a8 126739525 and 0x12f86a8 93225025
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f86a8 93225025 and 0x12f80a8 126739525
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f86b8 93225025 and 0x12f80a8 126739525
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f86b8 93225025 and 0x12f86a8 93225025
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8778 177260843 and 0x12f8768 177260843
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8828 74336756 and 0x12f71a8 76318456
+
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f71a8 76318456 and 0x12f8828 74336756
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8828 74336756 and 0x12f71a8 76318456
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8838 74336756 and 0x12f71a8 76318456
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8838 74336756 and 0x12f8828 74336756
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f88f8 169797896 and 0x12f88e8 169797896
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6ae8 39342661 and 0x12f7328 93677761
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f89a8 171422561 and 0x12f7328 93677761
+
+[ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
+[ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7328 93677761 and 0x12f89a8 171422561
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6ae8 39342661 and 0x12f7328 93677761
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6ae8 39342661 and 0x12f7328 93677761
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7328 93677761 and 0x12f89a8 171422561
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f89b8 171422561 and 0x12f7328 93677761
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f89b8 171422561 and 0x12f89a8 171422561
 
 DEBUG src/lcthw/hashmap.c 220: pos: 2, end: 3
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 2
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c88a8 210778719 and 0x22c6c28 250743319
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6c28 250743319 and 0x22c88a8 210778719
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c88a8 210778719 and 0x22c6c28 250743319
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c88b8 210778719 and 0x22c6c28 250743319
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c88b8 210778719 and 0x22c88a8 210778719
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8968 119973850 and 0x22c7528 184405050
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7528 184405050 and 0x22c8968 119973850
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8968 119973850 and 0x22c7528 184405050
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8978 119973850 and 0x22c7528 184405050
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8978 119973850 and 0x22c8968 119973850
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8a28 12352098 and 0x22c6328 29974498
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6328 29974498 and 0x22c8a28 12352098
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8a28 12352098 and 0x22c6328 29974498
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8a38 12352098 and 0x22c6328 29974498
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8a38 12352098 and 0x22c8a28 12352098
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8af8 98548741 and 0x22c8ae8 98548741
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8bb8 117062067 and 0x22c8ba8 117062067
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8c68 53983509 and 0x22c5668 108873409
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5668 108873409 and 0x22c8c68 53983509
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8c68 53983509 and 0x22c5668 108873409
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8c78 53983509 and 0x22c5668 108873409
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8c78 53983509 and 0x22c8c68 53983509
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8d28 114734916 and 0x22c5ea8 126432316
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5ea8 126432316 and 0x22c8d28 114734916
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8d28 114734916 and 0x22c5ea8 126432316
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8d38 114734916 and 0x22c5ea8 126432316
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8d38 114734916 and 0x22c8d28 114734916
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8df8 133799303 and 0x22c8de8 133799303
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8eb8 245518371 and 0x22c8ea8 245518371
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8f68 42916171 and 0x22c8ea8 245518371
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8ea8 245518371 and 0x22c8f68 42916171
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8f68 42916171 and 0x22c8ea8 245518371
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8f78 42916171 and 0x22c8ea8 245518371
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8f78 42916171 and 0x22c8f68 42916171
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9038 251552861 and 0x22c9028 251552861
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c90e8 26368985 and 0x22c8668 28698585
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8668 28698585 and 0x22c90e8 26368985
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c90e8 26368985 and 0x22c8668 28698585
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c90f8 26368985 and 0x22c8668 28698585
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c90f8 26368985 and 0x22c90e8 26368985
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c91a8 7647137 and 0x22c73a8 234820437
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c73a8 234820437 and 0x22c91a8 7647137
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c91a8 7647137 and 0x22c73a8 234820437
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c91b8 7647137 and 0x22c73a8 234820437
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c91b8 7647137 and 0x22c91a8 7647137
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9278 15839764 and 0x22c9268 15839764
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9328 247329184 and 0x22c69e8 9380484
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8a68 194871578 and 0x12f7268 104060878
 
 [ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
 [ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c69e8 9380484 and 0x22c9328 247329184
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7268 104060878 and 0x12f8a68 194871578
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c69e8 9380484 and 0x22c9328 247329184
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7268 104060878 and 0x12f8a68 194871578
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9338 247329184 and 0x22c9328 247329184
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8a78 194871578 and 0x12f8a68 194871578
 
 DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 2
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c69e8 9380484 and 0x22c9328 247329184
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c93e8 175551584 and 0x22c9328 247329184
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c93e8 175551584 and 0x22c69e8 9380484
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 2
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9328 247329184 and 0x22c93e8 175551584
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c69e8 9380484 and 0x22c93e8 175551584
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c69e8 9380484 and 0x22c93e8 175551584
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c93e8 175551584 and 0x22c9328 247329184
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c93f8 175551584 and 0x22c93e8 175551584
-
-DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 3
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c94a8 84719524 and 0x22c6028 100681024
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6028 100681024 and 0x22c94a8 84719524
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c94a8 84719524 and 0x22c6028 100681024
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c94b8 84719524 and 0x22c6028 100681024
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c94b8 84719524 and 0x22c94a8 84719524
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7e28 2809252 and 0x22c5ba8 113392952
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5ba8 113392952 and 0x22c87e8 244835752
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9568 250944352 and 0x22c5ba8 113392952
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9568 250944352 and 0x22c87e8 244835752
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8b28 31868358 and 0x12f76e8 494858
 
 [ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
 [ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7e28 2809252 and 0x22c5ba8 113392952
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f76e8 494858 and 0x12f8b28 31868358
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c87e8 244835752 and 0x22c9568 250944352
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f76e8 494858 and 0x12f8b28 31868358
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7e28 2809252 and 0x22c87e8 244835752
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8b38 31868358 and 0x12f8b28 31868358
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5ba8 113392952 and 0x22c87e8 244835752
+DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8bf8 91340581 and 0x12f8be8 91340581
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7e28 2809252 and 0x22c5ba8 113392952
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5ba8 113392952 and 0x22c87e8 244835752
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c87e8 244835752 and 0x22c9568 250944352
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9578 250944352 and 0x22c87e8 244835752
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9578 250944352 and 0x22c9568 250944352
-
-DEBUG src/lcthw/hashmap.c 220: pos: 3, end: 4
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 3
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9628 6358836 and 0x22c6928 64902836
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6928 64902836 and 0x22c9628 6358836
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9628 6358836 and 0x22c6928 64902836
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9638 6358836 and 0x22c6928 64902836
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9638 6358836 and 0x22c9628 6358836
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8968 119973850 and 0x22c7528 184405050
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6668 120475826 and 0x12f7868 265180126
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c96e8 18777750 and 0x22c7528 184405050
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8ca8 77936426 and 0x12f7868 265180126
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c96e8 18777750 and 0x22c8968 119973850
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8ca8 77936426 and 0x12f6668 120475826
 
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 2
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c7528 184405050 and 0x22c96e8 18777750
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7868 265180126 and 0x12f8ca8 77936426
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8968 119973850 and 0x22c96e8 18777750
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6668 120475826 and 0x12f8ca8 77936426
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8968 119973850 and 0x22c7528 184405050
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6668 120475826 and 0x12f7868 265180126
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c96e8 18777750 and 0x22c8968 119973850
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8ca8 77936426 and 0x12f6668 120475826
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c8968 119973850 and 0x22c7528 184405050
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6668 120475826 and 0x12f7868 265180126
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c96f8 18777750 and 0x22c8968 119973850
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8cb8 77936426 and 0x12f6668 120475826
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c96f8 18777750 and 0x22c96e8 18777750
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8cb8 77936426 and 0x12f8ca8 77936426
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 3
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c97b8 45021332 and 0x22c97a8 45021332
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8d78 138654889 and 0x12f8d68 138654889
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9878 264761813 and 0x22c9868 264761813
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8e38 22036402 and 0x12f8e28 22036402
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8ca8 77936426 and 0x12f6668 120475826
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6668 120475826 and 0x12f7868 265180126
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8ee8 187911626 and 0x12f6668 120475826
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8ee8 187911626 and 0x12f7868 265180126
+
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 3
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8ca8 77936426 and 0x12f6668 120475826
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7868 265180126 and 0x12f8ee8 187911626
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8ca8 77936426 and 0x12f8ee8 187911626
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6668 120475826 and 0x12f8ee8 187911626
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8ca8 77936426 and 0x12f6668 120475826
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6668 120475826 and 0x12f8ee8 187911626
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8ee8 187911626 and 0x12f7868 265180126
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8ef8 187911626 and 0x12f8ee8 187911626
+
+DEBUG src/lcthw/hashmap.c 220: pos: 2, end: 4
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 2
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8fb8 93065879 and 0x12f8fa8 93065879
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9938 35656902 and 0x22c9928 35656902
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9078 192946754 and 0x12f9068 192946754
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c99e8 33010470 and 0x22c6aa8 90117270
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9138 108501073 and 0x12f9128 108501073
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f91f8 207400408 and 0x12f91e8 207400408
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f92b8 136186594 and 0x12f92a8 136186594
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7e68 153336685 and 0x12f7fe8 217607785
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9368 30043585 and 0x12f7fe8 217607785
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9368 30043585 and 0x12f7e68 153336685
+
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 2
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7fe8 217607785 and 0x12f9368 30043585
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7e68 153336685 and 0x12f9368 30043585
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7e68 153336685 and 0x12f7fe8 217607785
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9368 30043585 and 0x12f7e68 153336685
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7e68 153336685 and 0x12f7fe8 217607785
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9378 30043585 and 0x12f7e68 153336685
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9378 30043585 and 0x12f9368 30043585
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 3
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9428 154282180 and 0x12f7da8 189822480
 
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6aa8 90117270 and 0x22c99e8 33010470
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7da8 189822480 and 0x12f9428 154282180
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c99e8 33010470 and 0x22c6aa8 90117270
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9428 154282180 and 0x12f7da8 189822480
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c99f8 33010470 and 0x22c6aa8 90117270
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9438 154282180 and 0x12f7da8 189822480
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c99f8 33010470 and 0x22c99e8 33010470
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9438 154282180 and 0x12f9428 154282180
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9aa8 58611023 and 0x22c5c68 149926423
-
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c5c68 149926423 and 0x22c9aa8 58611023
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9aa8 58611023 and 0x22c5c68 149926423
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9ab8 58611023 and 0x22c5c68 149926423
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9ab8 58611023 and 0x22c9aa8 58611023
-
-DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9b68 192762864 and 0x22c9268 15839764
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f94e8 215018762 and 0x12f7ce8 179867062
 
 [ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
 [ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9268 15839764 and 0x22c9b68 192762864
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7ce8 179867062 and 0x12f94e8 215018762
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9268 15839764 and 0x22c9b68 192762864
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7ce8 179867062 and 0x12f94e8 215018762
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9b78 192762864 and 0x22c9b68 192762864
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f94f8 215018762 and 0x12f94e8 215018762
 
 DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 2
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9268 15839764 and 0x22c9b68 192762864
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f95b8 185535823 and 0x12f95a8 185535823
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9c28 113803164 and 0x22c9b68 192762864
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9668 169675173 and 0x12f9128 108501073
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9c28 113803164 and 0x22c9268 15839764
+[ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
+[ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9128 108501073 and 0x12f9668 169675173
 
-DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 2
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9b68 192762864 and 0x22c9c28 113803164
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9128 108501073 and 0x12f9668 169675173
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9268 15839764 and 0x22c9c28 113803164
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9678 169675173 and 0x12f9668 169675173
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9268 15839764 and 0x22c9c28 113803164
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9c28 113803164 and 0x22c9b68 192762864
-
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9c38 113803164 and 0x22c9c28 113803164
-
-DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 3
+DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 2
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c88a8 210778719 and 0x22c6c28 250743319
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9738 153793344 and 0x12f9728 153793344
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9ce8 168803819 and 0x22c6c28 250743319
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f97f8 191890170 and 0x12f97e8 191890170
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9ce8 168803819 and 0x22c88a8 210778719
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f98b8 5375829 and 0x12f98a8 5375829
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9978 33384163 and 0x12f9968 33384163
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9a28 161986250 and 0x12f6de8 227025450
+
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6de8 227025450 and 0x12f9a28 161986250
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9a28 161986250 and 0x12f6de8 227025450
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9a38 161986250 and 0x12f6de8 227025450
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9a38 161986250 and 0x12f9a28 161986250
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9af8 81796904 and 0x12f9ae8 81796904
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9ba8 133262601 and 0x12f79e8 236762201
+
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f79e8 236762201 and 0x12f9ba8 133262601
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9ba8 133262601 and 0x12f79e8 236762201
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9bb8 133262601 and 0x12f79e8 236762201
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9bb8 133262601 and 0x12f9ba8 133262601
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9c68 120421434 and 0x12f7028 141277334
+
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7028 141277334 and 0x12f9c68 120421434
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9c68 120421434 and 0x12f7028 141277334
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9c78 120421434 and 0x12f7028 141277334
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9c78 120421434 and 0x12f9c68 120421434
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9d28 229088194 and 0x12f92a8 136186594
+
+[ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
+[ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f92a8 136186594 and 0x12f9d28 229088194
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f92a8 136186594 and 0x12f9d28 229088194
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9d38 229088194 and 0x12f9d28 229088194
+
+DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9df8 204639483 and 0x12f9de8 204639483
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9ea8 242655252 and 0x12f7568 28010952
+
+[ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
+[ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7568 28010952 and 0x12f9ea8 242655252
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7568 28010952 and 0x12f9ea8 242655252
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9eb8 242655252 and 0x12f9ea8 242655252
+
+DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9f68 65828808 and 0x12f91e8 207400408
+
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f91e8 207400408 and 0x12f9f68 65828808
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9f68 65828808 and 0x12f91e8 207400408
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9f78 65828808 and 0x12f91e8 207400408
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9f78 65828808 and 0x12f9f68 65828808
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa028 170663104 and 0x12f9ae8 81796904
+
+[ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
+[ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9ae8 81796904 and 0x12fa028 170663104
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9ae8 81796904 and 0x12fa028 170663104
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa038 170663104 and 0x12fa028 170663104
+
+DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa0f8 19457732 and 0x12fa0e8 19457732
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa1b8 162486431 and 0x12fa1a8 162486431
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa278 170632457 and 0x12fa268 170632457
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa338 244135141 and 0x12fa328 244135141
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa3e8 212876117 and 0x12f6ba8 218046417
+
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6ba8 218046417 and 0x12fa3e8 212876117
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa3e8 212876117 and 0x12f6ba8 218046417
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa3f8 212876117 and 0x12f6ba8 218046417
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa3f8 212876117 and 0x12fa3e8 212876117
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa4a8 11273364 and 0x12f7c28 210228964
+
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7c28 210228964 and 0x12fa4a8 11273364
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa4a8 11273364 and 0x12f7c28 210228964
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa4b8 11273364 and 0x12f7c28 210228964
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa4b8 11273364 and 0x12fa4a8 11273364
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa568 203489257 and 0x12fa268 170632457
+
+[ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
+[ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa268 170632457 and 0x12fa568 203489257
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa268 170632457 and 0x12fa568 203489257
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa578 203489257 and 0x12fa568 203489257
+
+DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa628 17618619 and 0x12f77a8 15269319
+
+[ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
+[ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f77a8 15269319 and 0x12fa628 17618619
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f77a8 15269319 and 0x12fa628 17618619
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa638 17618619 and 0x12fa628 17618619
+
+DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa6f8 222268105 and 0x12fa6e8 222268105
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa7a8 129891283 and 0x12f9de8 204639483
+
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9de8 204639483 and 0x12fa7a8 129891283
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa7a8 129891283 and 0x12f9de8 204639483
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa7b8 129891283 and 0x12f9de8 204639483
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa7b8 129891283 and 0x12fa7a8 129891283
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa868 40597040 and 0x12f82e8 245601240
+
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f82e8 245601240 and 0x12fa868 40597040
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa868 40597040 and 0x12f82e8 245601240
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa878 40597040 and 0x12f82e8 245601240
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa878 40597040 and 0x12fa868 40597040
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9ba8 133262601 and 0x12f79e8 236762201
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa928 18433701 and 0x12f79e8 236762201
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa928 18433701 and 0x12f9ba8 133262601
 
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 2
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6c28 250743319 and 0x22c9ce8 168803819
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f79e8 236762201 and 0x12fa928 18433701
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c88a8 210778719 and 0x22c9ce8 168803819
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9ba8 133262601 and 0x12fa928 18433701
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c88a8 210778719 and 0x22c6c28 250743319
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9ba8 133262601 and 0x12f79e8 236762201
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9ce8 168803819 and 0x22c88a8 210778719
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa928 18433701 and 0x12f9ba8 133262601
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c88a8 210778719 and 0x22c6c28 250743319
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9ba8 133262601 and 0x12f79e8 236762201
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9cf8 168803819 and 0x22c88a8 210778719
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa938 18433701 and 0x12f9ba8 133262601
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9cf8 168803819 and 0x22c9ce8 168803819
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa938 18433701 and 0x12fa928 18433701
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 3
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9db8 247176392 and 0x22c9da8 247176392
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa9f8 29351745 and 0x12fa9e8 29351745
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9e68 109314889 and 0x22c61a8 101527789
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12faaa8 92832453 and 0x12f85e8 185917653
+
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f85e8 185917653 and 0x12faaa8 92832453
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12faaa8 92832453 and 0x12f85e8 185917653
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12faab8 92832453 and 0x12f85e8 185917653
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12faab8 92832453 and 0x12faaa8 92832453
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7268 104060878 and 0x12f8a68 194871578
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fab68 213492678 and 0x12f8a68 194871578
 
 [ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
 [ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c61a8 101527789 and 0x22c9e68 109314889
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8a68 194871578 and 0x12fab68 213492678
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c61a8 101527789 and 0x22c9e68 109314889
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7268 104060878 and 0x12f8a68 194871578
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9e78 109314889 and 0x22c9e68 109314889
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f7268 104060878 and 0x12f8a68 194871578
 
-DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 2
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f8a68 194871578 and 0x12fab68 213492678
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fab78 213492678 and 0x12f8a68 194871578
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fab78 213492678 and 0x12fab68 213492678
+
+DEBUG src/lcthw/hashmap.c 220: pos: 2, end: 3
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 2
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fac28 80661188 and 0x12f6ea8 131762388
+
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6ea8 131762388 and 0x12fac28 80661188
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fac28 80661188 and 0x12f6ea8 131762388
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fac38 80661188 and 0x12f6ea8 131762388
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fac38 80661188 and 0x12fac28 80661188
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9f38 99015627 and 0x22c9f28 99015627
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12facf8 8812546 and 0x12face8 8812546
 
 DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
 DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9fe8 152250421 and 0x22c6e68 128716121
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fada8 98594306 and 0x12f6c68 112087906
+
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6c68 112087906 and 0x12fada8 98594306
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fada8 98594306 and 0x12f6c68 112087906
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fadb8 98594306 and 0x12f6c68 112087906
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fadb8 98594306 and 0x12fada8 98594306
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 2
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fae78 229835090 and 0x12fae68 229835090
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 1
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6728 30246820 and 0x12f74a8 128886720
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12faf28 148612320 and 0x12f74a8 128886720
 
 [ERROR] (src/lcthw/darray_algos.c:233:DArray_find: errno: None) Middle element is NULL.
 [ERROR] (src/lcthw/hashmap.c:214:Hashmap_get_node: errno: None) Error during binary search.
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6e68 128716121 and 0x22c9fe8 152250421
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f74a8 128886720 and 0x12faf28 148612320
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c6e68 128716121 and 0x22c9fe8 152250421
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6728 30246820 and 0x12f74a8 128886720
 
-DEBUG src/lcthw/hashmap.c 10: comparing 0x22c9ff8 152250421 and 0x22c9fe8 152250421
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f6728 30246820 and 0x12f74a8 128886720
 
-DEBUG src/lcthw/hashmap.c 220: pos: 1, end: 2
-DEBUG src/lcthw/hashmap.c 274: hashmap_get i 1
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f74a8 128886720 and 0x12faf28 148612320
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12faf38 148612320 and 0x12f74a8 128886720
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12faf38 148612320 and 0x12faf28 148612320
+
+DEBUG src/lcthw/hashmap.c 220: pos: 2, end: 3
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 2
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9ae8 81796904 and 0x12fa028 170663104
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fafe8 3416704 and 0x12fa028 170663104
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fafe8 3416704 and 0x12f9ae8 81796904
+
+DEBUG src/lcthw/hashmap.c 220: pos: -1, end: 2
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fa028 170663104 and 0x12fafe8 3416704
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9ae8 81796904 and 0x12fafe8 3416704
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9ae8 81796904 and 0x12fa028 170663104
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12fafe8 3416704 and 0x12f9ae8 81796904
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12f9ae8 81796904 and 0x12fa028 170663104
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12faff8 3416704 and 0x12f9ae8 81796904
+
+DEBUG src/lcthw/hashmap.c 10: comparing 0x12faff8 3416704 and 0x12fafe8 3416704
+
+DEBUG src/lcthw/hashmap.c 220: pos: 0, end: 3
+DEBUG src/lcthw/hashmap.c 274: hashmap_get i 0
 DEBUG tests/hashmap_tests.c 177: 
 ----- test_destroy
 DEBUG tests/list_algos_tests.c 243: ----- RUNNING: ./tests/list_algos_tests
@@ -1201,7 +1143,7 @@ DEBUG tests/queue_tests.c 56:
 DEBUG tests/radixmap_tests.c 119: ----- RUNNING: ./tests/radixmap_tests
 DEBUG tests/radixmap_tests.c 114: 
 ----- test_operations
-DEBUG tests/radixmap_tests.c 73: Adding and sorting 200 random keys took 0.0003150000 seconds
+DEBUG tests/radixmap_tests.c 73: Adding and sorting 200 random keys took 0.0003030000 seconds
 [ERROR] (src/lcthw/radixmap.c:165:RadixMap_add: errno: None) RadixMap is full.
 DEBUG tests/ringbuffer_tests.c 106: ----- RUNNING: ./tests/ringbuffer_tests
 DEBUG tests/ringbuffer_tests.c 95: 
@@ -1239,21 +1181,23 @@ DEBUG tests/stats_tests.c 73:
 DEBUG tests/string_algos_tests.c 258: ----- RUNNING: ./tests/string_algos_tests
 DEBUG tests/string_algos_tests.c 241: 
 ----- test_find_and_scan
-DEBUG tests/tstree_tests.c 180: ----- RUNNING: ./tests/tstree_tests
-DEBUG tests/tstree_tests.c 168: 
+DEBUG tests/tstree_tests.c 174: ----- RUNNING: ./tests/tstree_tests
+DEBUG tests/tstree_tests.c 162: 
 ----- test_insert
-DEBUG tests/tstree_tests.c 169: 
+DEBUG tests/tstree_tests.c 163: 
 ----- test_search_exact
-DEBUG tests/tstree_tests.c 170: 
+DEBUG tests/tstree_tests.c 164: 
 ----- test_search_prefix
-DEBUG tests/tstree_tests.c 171: 
+DEBUG tests/tstree_tests.c 58: result: 0x50982e, expected: 0x50982e
+DEBUG tests/tstree_tests.c 62: result: 0x509819, expected: 0x509819
+DEBUG tests/tstree_tests.c 165: 
 ----- test_traverse
-DEBUG tests/tstree_tests.c 105: traverse count is: 4
-DEBUG tests/tstree_tests.c 172: 
+DEBUG tests/tstree_tests.c 85: traverse count is: 4
+DEBUG tests/tstree_tests.c 166: 
 ----- test_collect
-DEBUG tests/tstree_tests.c 173: 
+DEBUG tests/tstree_tests.c 167: 
 ----- test_suffix
-DEBUG tests/tstree_tests.c 174: 
+DEBUG tests/tstree_tests.c 168: 
 ----- test_delete
-DEBUG tests/tstree_tests.c 175: 
+DEBUG tests/tstree_tests.c 169: 
 ----- test_destroy

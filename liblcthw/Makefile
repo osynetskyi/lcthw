@@ -1,4 +1,4 @@
-CFLAGS=-g -O2 -Wall -Wextra -Isrc -lbsd -lm -rdynamic -DNDEBUG $(OPTFLAGS)
+CFLAGS=-g -O2 -Wall -Wextra -Isrc -lbsd -lm -ldl -rdynamic -DNDEBUG $(OPTFLAGS)
 LIBS=-ldl -lbsd -lm $(OPTLIBS)
 PREFIX?=/usr/local
 

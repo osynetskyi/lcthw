@@ -9,32 +9,28 @@ typedef struct TSTree {
     struct TSTree *low;
     struct TSTree *equal;
     struct TSTree *high;
-    // void *value;
-    DArray *arr;
+    void *value;
 } TSTree;
 
-//void *TSTree_search(TSTree * root, const char *key, size_t len);
-DArray *TSTree_search(TSTree * root, const char *key, size_t len);
+void *TSTree_search(TSTree * root, const char *key, size_t len);
 
-//void *TSTree_search_prefix(TSTree * root, const char *key, size_t len);
-DArray *TSTree_search_prefix(TSTree * root, const char *key, size_t len);
+void *TSTree_search_prefix(TSTree * root, const char *key, size_t len);
 
-DArray *TSTree_collect(TSTree * root, const char *key, size_t len);
+TSTree *TSTree_insert_suffix(TSTree * root, const char *key, size_t len, 
+	void *value);
 
-//typedef void (*TSTree_traverse_cb) (void *value, void *data);
-typedef void (*TSTree_traverse_cb) (void *arr, void *data);
+void *TSTree_search_suffix(TSTree * root, const char *key, size_t len);
+
+void TSTree_delete(TSTree * root, const char *key, size_t len);
+
+typedef void (*TSTree_traverse_cb) (void *value, void *data);
 
 TSTree *TSTree_insert(TSTree * node, const char *key, size_t len,
 	void *value);
 
-TSTree *TSTree_insert_suffix(TSTree * node, const char *key, size_t len,
-	void *value);
-
-DArray *TSTree_search_suffix(TSTree * node, const char *key, size_t len);
-
-void TSTree_delete(TSTree * root, const char *key, size_t len);
-
 void TSTree_traverse(TSTree * node, TSTree_traverse_cb cb, void *data);
+
+DArray *TSTree_collect(TSTree * root, const char *key, size_t len);
 
 void TSTree_destroy(TSTree * root);
 

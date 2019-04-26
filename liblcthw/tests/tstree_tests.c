@@ -3,47 +3,36 @@
 #include <string.h>
 #include <assert.h>
 #include <lcthw/bstrlib.h>
-#include <lcthw/list.h>
 
 TSTree *node = NULL;
 char *valueA = "VALUEA";
 char *valueB = "VALUEB";
 char *value2 = "VALUE2";
-char *value3 = "VALUE3";
 char *value4 = "VALUE4";
 char *reverse = "VALUER";
 int traverse_count = 0;
 
-//struct tagbstring test1 = bsStatic("TEST");
-//struct tagbstring test2 = bsStatic("TEST2");
-//struct tagbstring test3 = bsStatic("TSET");
-//struct tagbstring test4 = bsStatic("T");
-
-const char *test1 = "TEST";
-const char *test2 = "TEST2";
-const char *test3 = "TSET";
-const char *test4 = "T";
+struct tagbstring test1 = bsStatic("TEST");
+struct tagbstring test2 = bsStatic("TEST2");
+struct tagbstring test3 = bsStatic("TSET");
+struct tagbstring test4 = bsStatic("T");
 
 char *test_insert()
 {
-    node = TSTree_insert(node, test1, 4, valueA);
+    node = TSTree_insert(node, bdata(&test1), blength(&test1), valueA);
     mu_assert(node != NULL, "Failed to insert into tst.");
 
-    node = TSTree_insert(node, test2, 5, value2);
+    node = TSTree_insert(node, bdata(&test2), blength(&test2), value2);
     mu_assert(node != NULL,
 	    "Failed to insert into tst with second name.");
 
-    node = TSTree_insert(node, test3, 4, reverse);
+    node = TSTree_insert(node, bdata(&test3), blength(&test3), reverse);
     mu_assert(node != NULL,
 	    "Failed to insert into tst with reverse name.");
 
-    node = TSTree_insert(node, test4, 1, value4);
+    node = TSTree_insert(node, bdata(&test4), blength(&test4), value4);
     mu_assert(node != NULL,
-	    "Failed to insert into tst with second name.");
-    
-    node = TSTree_insert(node, test4, 1, value3);
-    mu_assert(node != NULL,
-	    "Failed to insert second value for the same key.");
+	    "Failed to insert into tst with fourth name.");
 
     return NULL;
 }
@@ -51,36 +40,27 @@ char *test_insert()
 char *test_search_exact()
 {
     // tst returns the last one inserted
-    DArray *res = TSTree_search(node, test1, 4);
-    mu_assert(DArray_first(res) == valueA,
+    void *res = TSTree_search(node, bdata(&test1), blength(&test1));
+    mu_assert(res == valueA,
 	    "Got the wrong value back, should get A not B.");
 
     // tst does not find if not exact
     res = TSTree_search(node, "TESTNO", strlen("TESTNO"));
-    mu_assert(res == NULL, "SHould not find anything.");
-
-    // see count for test4, should be 2
-    res = TSTree_search(node, test4, 1);
-    mu_assert(DArray_count(res) == 2, "Wrong DArray count.");
-
-    /*List *lol = recurse(node, List_create());
-    printf("Returned %d results.\n", List_count(lol));
-    LIST_FOREACH(lol, first, next, cur) {
-        printf("%s\n", cur->value);
-    }
-    List_clear_destroy(lol);*/
+    mu_assert(res == NULL, "Shoud not find anything.");
 
     return NULL;
 }
 
 char *test_search_prefix()
 {
-    DArray *res = TSTree_search_prefix(
-	    node, test1, 4);
-    mu_assert(DArray_first(res) == valueA, "Got wrong valueA by prefix.");
+    void *res = TSTree_search_prefix(
+	    node, bdata(&test1), blength(&test1));
+    debug("result: %p, expected: %p", res, valueA);
+    mu_assert(res == valueA, "Got wrong valueA by prefix.");
 
-    res = TSTree_search_prefix(node, test1, 1);
-    mu_assert(DArray_first(res) == value4, "Got wrong value4 for prefix of 1.");
+    res = TSTree_search_prefix(node, bdata(&test1), 1);
+    debug("result: %p, expected: %p", res, value4);
+    mu_assert(res == value4, "Got wrong value4 for prefix of 1.");
 
     res = TSTree_search_prefix(node, "TE", strlen("TE"));
     mu_assert(res != NULL, "Should find for short prefix.");
@@ -110,15 +90,30 @@ char *test_traverse()
 
 char *test_collect()
 {
-    DArray *res = TSTree_collect(node, "T--", strlen("T--"));
-    /*int i = 0;
-    printf("count: %d\n", DArray_count(res));
-    for (i = 0; i < DArray_count(res); i++) {
-	printf("%s\n", DArray_get(res, i));
-    }*/
-    mu_assert(DArray_count(res) == 3, "Wrong count in res DArray.");
+    TSTree *tree = NULL;
+    tree = TSTree_insert(tree, "start", strlen("start"), "start_value");
+    tree = TSTree_insert(tree, "sport", strlen("sport"), "sport_value");
+    tree = TSTree_insert(tree, "sublime", strlen("sublime"), "sublime_value");
+    tree = TSTree_insert(tree, "suburb", strlen("suburb"), "suburb_value");
+    tree = TSTree_insert(tree, "subway", strlen("subway"), "subway_value");
+    tree = TSTree_insert(tree, "subdomain", strlen("subdomain"), "subdomain_value");
 
-    DArray_clear_destroy(res);
+    DArray *pwned = TSTree_collect(tree, "subconcious", strlen("subconcious"));
+    
+    mu_assert(pwned->end == 4, "Wrong suffix count");
+    
+    if (pwned) {
+        int i = 0;
+        for (i = 0; i < DArray_count(pwned); i++) {
+            if (DArray_get(pwned, i)) {
+		//printf("%s\n", bdata((bstring)DArray_get(pwned, i)));
+	        bdestroy((bstring)DArray_get(pwned, i));
+	    }
+        }
+        DArray_destroy(pwned);
+    }
+    TSTree_destroy(tree);
+
     return NULL;
 }
 
@@ -134,22 +129,21 @@ char *test_suffix()
     tree = TSTree_insert_suffix(tree, "chat.google.com", 15, v3);
     tree = TSTree_insert_suffix(tree, "bing.com", 8, v4);
 
-    DArray *res = TSTree_search_suffix(tree, "t.google.com", 12);
-    mu_assert(strncmp(DArray_first(res), v3, 5) == 0, 
-	    "Wrong value after search_suffix");
-    //for (int i = 0; i < DArray_count(res); i++) {
-    //    printf("darray elem: %s\n", DArray_get(res, i));
-    //}
+    char *res = (char *)TSTree_search_suffix(tree, "t.google.com", 12);
+    mu_assert(strncmp(res, v3, 5) == 0, "Wrong value after search_suffix");
+
+    //DArray *tmp = TSTree_collect(tree, "moc.elgoog.", strlen("moc.elgoog."));
 
     TSTree_destroy(tree);
+
     return NULL;
 }
 
 char *test_delete()
 {
-    TSTree_delete(node, test4, 1);
-    DArray *res = TSTree_search(node, test4, 1);
-    mu_assert(res == NULL, "Should be deleted.");
+    TSTree_delete(node, bdata(&test1), blength(&test1));
+    void *res = TSTree_search(node, bdata(&test1), blength(&test1));
+    mu_assert(res == NULL, "valueA should be deleted.");
 
     return NULL;
 }

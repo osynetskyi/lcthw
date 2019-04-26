@@ -190,3 +190,13 @@ DArray *DArray_copy(DArray * array)
 error:
     return NULL;
 }
+
+void DArray_join(DArray *main, DArray *joiner) 
+{
+    int i = 0;
+    for (i = 0; i < DArray_count(joiner); i++) {
+        DArray_push(main, DArray_get(joiner, i));
+    }
+
+    DArray_destroy(joiner);
+}

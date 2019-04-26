@@ -1,22 +1,48 @@
 #include <lcthw/tstree.h>
 #include <lcthw/bstrlib.h>
+#include <dlfcn.h>
+//#include <lcthw/dbg.h>
+
+typedef struct Handler {
+    bstring name;
+    bstring url;
+    bstring function;
+} Handler;
+
+typedef int (*lib_function) (const char *data);
 
 TSTree *add_route_data(TSTree * routes, bstring line)
 {
     struct bstrList *data = bsplit(line, ' ');
-    check(data->qty == 2, "Line '%s' does not have 2 columns",
+    check(data != NULL, "Bad data from bsplit.");
+    check(data->qty > 1, "Line '%s' has less than 2 columns",
 	    bdata(line));
 
-    routes = TSTree_insert(routes,
+    Handler *handler = malloc(sizeof(Handler));
+    handler->url = bstrcpy(data->entry[0]);
+    handler->name = bstrcpy(data->entry[1]);
+    if (data->qty == 3) {
+        handler->function = bstrcpy(data->entry[2]);
+    } else {
+        handler->function = NULL;
+    }
+
+    /*routes = TSTree_insert(routes,
 	    bdata(data->entry[0]),
 	    blength(data->entry[0]),
-	    bstrcpy(data->entry[1]));
+	    bstrcpy(data->entry[1]));*/
+
+    routes = TSTree_insert(routes,
+	    bdata(handler->url),
+	    blength(handler->url),
+	    handler);
 
     bstrListDestroy(data);
 
     return routes;
 
 error:
+    if (data) bstrListDestroy(data);
     return NULL;
 }
 
@@ -25,6 +51,7 @@ TSTree *load_routes(const char *file)
     TSTree *routes = NULL;
     bstring line = NULL;
     FILE *routes_map = NULL;
+
     routes_map = fopen(file, "r");
     check(routes_map != NULL, "Failed to open routes: %s", file);
 
@@ -33,6 +60,7 @@ TSTree *load_routes(const char *file)
 	routes = add_route_data(routes, line);
 	check(routes != NULL, "Failed to add route.");
 	bdestroy(line);
+	line = NULL;
     }
 
     fclose(routes_map);
@@ -45,19 +73,44 @@ error:
     return NULL;
 }
 
-bstring match_url(TSTree * routes, bstring url)
+bstring match_url(TSTree * routes, bstring url, char **method)
 {
-    DArray *res = NULL;
+    //bstring route = TSTree_search(routes, bdata(url), blength(url));
+    Handler *handler = TSTree_search(routes, bdata(url), blength(url));
     bstring route = NULL;
-    res = TSTree_search(routes, bdata(url), blength(url));
 
-    if (res == NULL) {
+    if (handler) {
+        route = handler->name;
+	if (handler->function)
+	    *method = bdata(handler->function);
+    } else  {
         printf("No exact match found, trying prefix.\n");
-	res = TSTree_search_prefix(routes, bdata(url), blength(url));
-    }
+	//route = TSTree_search_prefix(routes, bdata(url), blength(url));
 
-    route = DArray_first(res);
-    DArray_destroy(res);
+	DArray *tmp = TSTree_collect(routes, bdata(url), blength(url));
+	if (tmp && DArray_count(tmp) > 0) {
+	    int i = 0;
+	    char *max_key = NULL;
+	    int max = 0;
+	    for (i = 0; i < DArray_count(tmp); i++) {
+		bstring cur = (bstring)DArray_get(tmp, i);
+	        //printf("%s\n", bdata(cur));
+		if (blength(cur) > max) {
+		    max = blength(cur);
+		    max_key = bdata(cur);
+		}
+	    }
+
+	    //route = TSTree_search(routes, max_key, max);
+	    Handler *handler = TSTree_search(routes, max_key, max);
+	    route = handler->name;
+	    
+	    for (i = 0; i < DArray_count(tmp); i++) {
+	        bdestroy((bstring)DArray_get(tmp, i));
+	    }
+	    DArray_destroy(tmp);
+	}
+    }
 
     return route;
 }
@@ -74,19 +127,19 @@ bstring read_line(const char *prompt)
     return result;
 
 error:
+    if (result) bdestroy(result);
     return NULL;
 }
 
-void bdestroy_cb(DArray *value, void *ignored)
+void bdestroy_cb(void *value, void *ignored)
 {
     (void)ignored;
-    if (value) {
-        for (int i = 0; i < DArray_count(value); i++) {
-	    bdestroy((bstring)DArray_get(value, i));
-	}
-	DArray_destroy(value);
-    }
     //bdestroy((bstring) value);
+    Handler *handler = (Handler *)value;
+    bdestroy(handler->url);
+    bdestroy(handler->name);
+    if (handler->function) bdestroy(handler->function);
+    free(handler);
 }
 
 void destroy_routes(TSTree * routes)
@@ -109,11 +162,33 @@ int main(int argc, char *argv[])
     while (1) {
         url = read_line("URL> ");
 	check_debug(url != NULL, "goodbye.");
+	if (blength(url) == 0) {
+	    bdestroy(url);
+	    break;
+	}
 
-	route = match_url(routes, url);
+	char *method = NULL;
+
+	route = match_url(routes, url, &method);
 
 	if (route) {
 	    printf("MATCH: %s == %s\n", bdata(url), bdata(route));
+	    if (method) {
+		char *lib_name = bdata(route);
+	        void *lib = dlopen(lib_name, RTLD_NOW);
+		check(lib, "Failed to open library %s: %s", lib_name,
+			dlerror());
+
+		lib_function func = dlsym(lib, method);
+		check(func, "Did not find %s function in the library %s: %s",
+			method, lib_name, dlerror());
+
+		int rc = func("test string");
+		check(rc == 0, "Function %s returned %d", method, rc);
+
+		rc = dlclose(lib);
+		check(rc == 0, "Failed to close %s", lib_name);
+	    }
 	} else {
 	    printf("FAIL: %s\n", bdata(url));
 	}
@@ -125,6 +200,6 @@ int main(int argc, char *argv[])
     return 0;
 
 error:
-    destroy_routes(routes);
+    if (routes) destroy_routes(routes);
     return 1;
 }
