@@ -64,7 +64,7 @@ TSTree *TSTree_insert(TSTree * node, const char *key, size_t len,
     return TSTree_insert_base(node, node, key, len, value);
 }
 
-void *TSTree_search(TSTree * root, const char *key, size_t len)
+TSTree *TSTree_search_ref(TSTree * root, const char *key, size_t len)
 {
     check(key != NULL, "Search key can't be NULL");
     check(len > 0, "Search length must be positive");
@@ -83,6 +83,33 @@ void *TSTree_search(TSTree * root, const char *key, size_t len)
 	    node = node->high;
 	}
     }
+
+    return node;
+
+error:
+    return NULL;
+}
+
+void *TSTree_search(TSTree * root, const char *key, size_t len)
+{
+    /*check(key != NULL, "Search key can't be NULL");
+    check(len > 0, "Search length must be positive");
+
+    TSTree *node = root;
+    size_t i = 0;
+
+    while (i < len && node) {
+        if (key[i] < node->splitchar) {
+	    node = node->low;
+	} else if (key[i] == node->splitchar) {
+	    i++;
+	    if (i < len)
+		node = node->equal;
+	} else {
+	    node = node->high;
+	}
+    }*/
+    TSTree *node = TSTree_search_ref(root, key, len);
 
     if (node) {
 	return node->value;
@@ -135,9 +162,10 @@ error:
     return NULL;
 }
 
-void TSTree_delete(TSTree * root, const char *key, size_t len)
+void TSTree_delete(TSTree * root, const char *key, size_t len, 
+	TSTree_delete_cb cb)
 {
-    TSTree *node = root;
+    /*TSTree *node = root;
     size_t i = 0;
 
     while (i < len && node) {
@@ -154,6 +182,13 @@ void TSTree_delete(TSTree * root, const char *key, size_t len)
 
     if (node) {
         //free(node->value);
+	node->value = NULL;
+    }*/
+    TSTree *node = TSTree_search_ref(root, key, len);
+    if (node) {
+	if (cb) {
+	    cb(node->value);
+	}
 	node->value = NULL;
     }
 }

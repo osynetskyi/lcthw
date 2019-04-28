@@ -51,3 +51,12 @@ void Stats_dump(Stats * st)
 	    st->sum, st->sumsq, st->n, st->min, st->max, Stats_mean(st),
 	    Stats_stddev(st));
 }
+
+void Stats_dump_buf(Stats * st, char *buf)
+{
+    sprintf(buf,
+	    "sum: %f, sumsq: %f, n: %ld, "
+	    "min: %f, max: %f, mean: %f, stddev: %f\n",
+	    st->sum, st->sumsq, st->n, st->min, st->max, Stats_mean(st),
+	    Stats_stddev(st));
+}

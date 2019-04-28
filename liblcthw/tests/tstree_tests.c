@@ -98,19 +98,19 @@ char *test_collect()
     tree = TSTree_insert(tree, "subway", strlen("subway"), "subway_value");
     tree = TSTree_insert(tree, "subdomain", strlen("subdomain"), "subdomain_value");
 
-    DArray *pwned = TSTree_collect(tree, "subconcious", strlen("subconcious"));
+    DArray *res = TSTree_collect(tree, "subconcious", strlen("subconcious"));
     
-    mu_assert(pwned->end == 4, "Wrong suffix count");
+    mu_assert(DArray_count(res) == 4, "Wrong suffix count");
     
-    if (pwned) {
+    if (res) {
         int i = 0;
-        for (i = 0; i < DArray_count(pwned); i++) {
-            if (DArray_get(pwned, i)) {
-		//printf("%s\n", bdata((bstring)DArray_get(pwned, i)));
-	        bdestroy((bstring)DArray_get(pwned, i));
+        for (i = 0; i < DArray_count(res); i++) {
+            if (DArray_get(res, i)) {
+		//printf("%s\n", bdata((bstring)DArray_get(res, i)));
+	        bdestroy((bstring)DArray_get(res, i));
 	    }
         }
-        DArray_destroy(pwned);
+        DArray_destroy(res);
     }
     TSTree_destroy(tree);
 
@@ -141,7 +141,7 @@ char *test_suffix()
 
 char *test_delete()
 {
-    TSTree_delete(node, bdata(&test1), blength(&test1));
+    TSTree_delete(node, bdata(&test1), blength(&test1), NULL);
     void *res = TSTree_search(node, bdata(&test1), blength(&test1));
     mu_assert(res == NULL, "valueA should be deleted.");
 

@@ -1,5 +1,6 @@
-CFLAGS=-g -O2 -Wall -Wextra -Isrc -rdynamic -lbsd -lm -ldl -DNDEBUG $(OPTFLAGS)
-LIBS=-ldl $(OPTLIBS)
+CFLAGS=-g -O2 -Wall -Wextra -Isrc -I/home/alex/lcthw/liblcthw/src -rdynamic -DNDEBUG $(OPTFLAGS)
+LIBS=-lbsd -lm -ldl -llcthw $(OPTLIBS)
+LDFLAGS=-L/home/alex/lcthw/liblcthw/build $(LIBS)
 PREFIX?=/usr/local
 
 SOURCES=$(wildcard src/**/*.c src/*.c)
@@ -26,7 +27,7 @@ $(TARGET): build $(OBJECTS)
 	ranlib $@
 
 $(SO_TARGET): $(TARGET) $(OBJECTS)
-	$(CC) -shared -o $@ $(OBJECTS)
+	$(CC) -shared -o $@ $(LD_FLAGS) $(OBJECTS)
 
 build:
 	@mkdir -p build
@@ -39,7 +40,7 @@ tests: $(TESTS)
 	sh ./tests/runtests.sh
 	./tests/runtests
 
-$(PROGRAMS): CFLAGS += $(SO_TARGET)
+$(PROGRAMS): CFLAGS += $(SO_TARGET) $(LD_FLAGS)
 
 # The Cleaner
 clean:

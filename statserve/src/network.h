@@ -9,8 +9,6 @@
 #include <errno.h>
 #include <sys/types.h>
 
-void error(const char *msg);
-
 int create_socket(int port);
 
 #endif

@@ -31,4 +31,6 @@ void Stats_sample(Stats * st, double s);
 
 void Stats_dump(Stats * st);
 
+void Stats_dump_buf(Stats * st, char *buf);
+
 #endif
