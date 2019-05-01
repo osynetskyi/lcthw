@@ -102,6 +102,11 @@ char *test_collect()
     
     mu_assert(DArray_count(res) == 4, "Wrong suffix count");
     
+    /*tree = TSTree_insert(tree, "a", strlen("a"), "a_val");
+    tree = TSTree_insert(tree, "ab", strlen("ab"), "ab_val");
+    tree = TSTree_insert(tree, "ac", strlen("ac"), "ac_val");
+    tree = TSTree_insert(tree, "ad", strlen("ad"), "ad_val");
+    DArray *res = TSTree_collect_keys(tree, bfromcstr(""));*/
     if (res) {
         int i = 0;
         for (i = 0; i < DArray_count(res); i++) {

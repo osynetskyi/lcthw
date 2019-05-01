@@ -3,6 +3,8 @@
 #include <lcthw/stats.h>
 #include <lcthw/tstree.h>
 #include <lcthw/bstrlib.h>
+#include "limits.h"
+#include "float.h"
 
 const char *help = "USAGE: <command> <name> [parameter]\n\
 Available commands: create, sample, mean, dump, delete, list\n\
@@ -57,6 +59,107 @@ error:
     return 0;
 }
 
+int count_slashes(bstring str)
+{
+    int i = 0;
+    int count = 0;
+    for (i = 0; i < blength(str); i++) {
+	if (bdata(str)[i] == '/') {
+	    count += 1;
+	}
+    }
+    //printf("count: %d\n", count);
+    
+    return count;
+}
+
+struct bstrList *parse_url(bstring url)
+{
+    int i = 0;
+    int count = count_slashes(url);
+
+    struct bstrList *list = bstrListCreate();
+    list->qty = count;
+    list->mlen = count;
+    list->entry = calloc(1, sizeof(bstring) * count);
+    list->entry[0] = bstrcpy(url);
+
+    int j = 1;
+    i = blength(url) - 1;
+    while (i != 0) {
+        if (bdata(url)[i] == '/') {
+	    i--;
+	    list->entry[j] = blk2bstr(bdata(url), i+1);
+	    j++;
+	} else {
+	    i--;
+	}
+    }
+
+    /*for (i = 0; i < count; i++) {
+        printf("%s\n", bdata(list->entry[i]));
+    }*/
+
+    return list;
+}
+
+TSTree *adjust_min_max(TSTree *tree, bstring child, bstring parent)
+{
+    DArray *children = TSTree_collect(tree, bdata(parent), blength(parent));
+    Stats *stats = TSTree_search(tree, bdata(parent), blength(parent));
+    double min = DBL_MAX;
+    double max = 0;
+    int child_level = count_slashes(child);
+    int i = 0;
+    for (i = 0; i < DArray_count(children); i++) {
+	bstring cur = (bstring)DArray_get(children, i);
+        if (count_slashes(cur) != child_level) {
+	    continue;
+	}
+	if (biseq(cur, child) == 1) {
+	    continue;
+	}
+
+	Stats *st = TSTree_search(tree, bdata(cur), blength(cur));
+	if (st->min < min) {
+	    min = st->min;
+	}
+	if (st->max > max) {
+	    max = st->max;
+	}
+
+    }
+
+    stats->min = min;
+    stats->max = max;
+
+    return tree;
+}
+
+TSTree *adjust_stats(TSTree *tree, bstring name)
+{
+    Stats *stats = TSTree_search(tree, bdata(name), blength(name));
+    struct bstrList *parents = parse_url(name);
+    int i = 0;
+    if (parents->qty == 1) {
+        return tree;
+    }
+    bstring parent = parents->entry[1];
+    Stats *parent_stats = TSTree_search(tree, bdata(parent), blength(parent));
+
+    parent_stats->sum -= stats->sum;
+    parent_stats->sumsq -= stats->sumsq;
+    parent_stats->n -= stats->n;
+
+    if ((parent_stats->min == stats->min) || (parent_stats->max == stats->max)) {
+	for (i = 0; i < parents->qty - 1; i++) {
+            tree = adjust_min_max(tree, parents->entry[i], parents->entry[i+1]);
+	}
+    }
+
+    return tree;
+}
+
 TSTree *execute(TSTree *tree, struct bstrList *data, char **out_buf)
 {
     bstring create = bfromcstr("create");
@@ -67,11 +170,11 @@ TSTree *execute(TSTree *tree, struct bstrList *data, char **out_buf)
     bstring list = bfromcstr("list");
 
     bstring verb = data->entry[0];
+    int i = 0;
 
     if (biseq(verb, list) == 1) {
 	bstring running = bfromcstr("");
 	DArray *names = TSTree_collect_keys(tree, running);
-	int i = 0;
 	sprintf(*out_buf, "Statistics available on server:\n");
 	for (i = 0; i < DArray_count(names); i++) {
 	    sprintf(*out_buf, "%s %s\n", *out_buf, bdata((bstring)DArray_get(names, i)));
@@ -83,6 +186,14 @@ TSTree *execute(TSTree *tree, struct bstrList *data, char **out_buf)
 
     bstring name = data->entry[1];
 
+    struct bstrList *parents = parse_url(name);
+    for (i = 1; i < parents->qty; i++) {
+        if (!TSTree_search(tree, bdata(parents->entry[i]), blength(parents->entry[i]))) {
+	    sprintf(*out_buf, "Parent statistic %s not found, create it first!\n", bdata(parents->entry[i]));
+	    return tree;
+	}
+    }
+    
     Stats *stats = TSTree_search(tree, bdata(name), blength(name));
 
     if (biseq(verb, create) == 1) {
@@ -90,7 +201,8 @@ TSTree *execute(TSTree *tree, struct bstrList *data, char **out_buf)
 	    sprintf(*out_buf, "Statistic %s already exists on server!\n", bdata(name));
 	    return tree;
 	}
-        stats = Stats_create();
+        
+	stats = Stats_create();
 	tree = TSTree_insert(tree, bdata(name), blength(name), stats);
 	sprintf(*out_buf, "Created statistic %s\n", bdata(name));
     } else { 
@@ -101,6 +213,12 @@ TSTree *execute(TSTree *tree, struct bstrList *data, char **out_buf)
 
 	if (biseq(verb, sample) == 1) {
 	    double s = atof(bdata(data->entry[2]));
+
+	    for (i = 1; i < parents->qty; i++) {
+		Stats *cur = TSTree_search(tree, bdata(parents->entry[i]), blength(parents->entry[i]));
+		Stats_sample(cur, s);
+	    }
+
 	    Stats_sample(stats, s);
 	    sprintf(*out_buf, "Added sample %.2f to statistic %s\n", s, bdata(name));
 	}
@@ -115,11 +233,29 @@ TSTree *execute(TSTree *tree, struct bstrList *data, char **out_buf)
 	}
 
         if (biseq(verb, delete) == 1) {
+	    DArray *substats = TSTree_collect(tree, bdata(name), blength(name));
+	    if (substats) {
+		//printf("count: %d\n", DArray_count(substats));
+		/*for (i = 0; i < DArray_count(substats); i++) {
+		    printf("%s\n", bdata((bstring)DArray_get(substats, i)));
+		}*/
+		for (i = 0; i < DArray_count(substats) - 1; i++) {
+		    bstring cur = (bstring)DArray_get(substats, i);
+		    TSTree_delete(tree, bdata(cur), blength(cur), NULL);
+		    bdestroy(cur);
+		}
+		bdestroy((bstring)DArray_get(substats, DArray_count(substats)-1));
+		DArray_destroy(substats);
+	    }
+
+	    tree = adjust_stats(tree, name);
+
 	    TSTree_delete(tree, bdata(name), blength(name), NULL);
 	    sprintf(*out_buf, "Deleted statistic %s from the server\n", bdata(name));
         }
     }
 
+    bstrListDestroy(parents);
     bdestroy(create);
     bdestroy(sample);
     bdestroy(mean);

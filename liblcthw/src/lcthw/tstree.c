@@ -214,11 +214,12 @@ void TSTree_traverse(TSTree * node, TSTree_traverse_cb cb, void *data)
 
 DArray *TSTree_collect_keys(TSTree * root, bstring running)
 {
-    DArray *res = DArray_create(50, 10);
+    DArray *res = DArray_create(50, 100);
 
     if (root->value) {
-	binsertch(running, blength(running), 1, root->splitchar);
+	//binsertch(running, blength(running), 1, root->splitchar);
 	bstring insert = bstrcpy(running);
+	binsertch(insert, blength(insert), 1, root->splitchar);
 	//printf("Found value, inserting into res %s %p\n", bdata(insert), insert);
 	DArray_push(res, insert);
     }
@@ -238,9 +239,9 @@ DArray *TSTree_collect_keys(TSTree * root, bstring running)
     }
 
     if (root->equal) {
-	if (!root->value) {
-	    binsertch(running, blength(running), 1, root->splitchar);
-	}
+	//if (!root->value) {
+	binsertch(running, blength(running), 1, root->splitchar);
+	//}
 	DArray *down_res = TSTree_collect_keys(root->equal, running);
         DArray_join(res, down_res);
     }
